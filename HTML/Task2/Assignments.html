@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header, nav, main, aside, footer {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    header {
+      background-color: #f4f4f4;
+    }
+    nav {
+      background-color: #e9e9e9;
+    }
+    main {
+      display: flex;
+      padding: 20px;
+    }
+    article {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #999;
+    }
+    aside {
+      width: 25%;
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-left: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Assignment 02 -->
+
+  <header>
+    <h1>Page Title</h1>
+    <nav>
+      <a href="#">Link 1</a> |
+      <a href="#">Link 2</a> |
+      <a href="#">Link 3</a> |
+      <a href="#">Link 4</a> |
+      <a href="#">Link 5</a>
+    </nav>
+  </header>
+
+  <nav>
+    <a href="#">Section 1</a> |
+    <a href="#">Section 2</a> |
+    <a href="#">Section 3</a> |
+    <a href="#">Section 4</a> |
+    <a href="#">Section 5</a> |
+    <a href="#">Section 6</a>
+  </nav>
+
+  <main>
+    <!-- Page content -->
+    <section style="width: 75%;">
+      <article>
+        <h2>Article Title 1</h2>
+        <p>This is a part of article 1 content explaining something useful.</p>
+        <img src="1.jpg" alt="Article 1 Image">
+        <p><a href="#">Read more</a></p>
+      </article>
+
+      <article>
+        <h2>Article Title 2</h2>
+        <p>This is a part of article 2 content discussing something else.</p>
+        <img src="2.jpg" alt="Article 2 Image">
+        <p><a href="#">Read more</a></p>
+      </article>
+
+      <article>
+        <h2>Article Title 3</h2>
+        <p>This is a part of article 3 content containing important info.</p>
+        <img src="3.jpg" alt="Article 3 Image">
+        <p><a href="#">Read more</a></p>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside>
+      <h3>Categories</h3>
+      <ul>
+        <li>Technology</li>
+        <li>Education</li>
+        <li>Sports</li>
+        <li>Art</li>
+        <li>Entertainment</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    &copy; 2021 Copyright
+  </footer>
+
+  <!-- Assignment 03: Audio -->
+  <section>
+    <h2>Audio Player</h2>
+    <audio autoplay loop controls>
+      <source src="audio.mp3" type="audio/mp3">
+      <source src="audio.ogg" type="audio/ogg">
+      <source src="audio.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Assignment 04: Video -->
+  <section>
+    <h2>Video Player</h2>
+    <video autoplay muted controls loop width="400" poster="poster.jpg">
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.webm" type="video/webm">
+      <source src="video.ogg" type="video/ogg">
+      Your browser does not support the video element.
+      <track src="captions-en.vtt" kind="subtitles" srclang="en" label="English">
+      <track src="captions-ar.vtt" kind="subtitles" srclang="ar" label="Arabic">
+    </video>
+  </section>
+
+</body>
+</html>
