@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+<body>
+
+  <form action="" method="get">
+    
+    <!-- تكليف 1 -->
+    <input type="hidden" name="Token" value="b92f1fc2fce391ad7af633723afd3055">
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="Email" value="o@o.com" readonly><br><hr>
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="Username" minlength="5" maxlength="20" required autofocus><br><hr>
+
+    <!-- تكليف 2 -->
+    <!-- Skills -->
+    <fieldset>
+      <legend>Skills</legend>
+      <input type="checkbox" name="skills" value="Problem Solving" id="skill1" checked>
+      <label for="skill1">Problem Solving</label><br>
+
+      <input type="checkbox" name="skills" value="Logical Thinking" id="skill2">
+      <label for="skill2">Logical Thinking</label><br>
+
+      <input type="checkbox" name="skills" value="Advanced Search" id="skill3">
+      <label for="skill3">Advanced Search</label><br>
+
+      <input type="checkbox" name="skills" value="Analysis" id="skill4">
+      <label for="skill4">Analysis</label><br>
+
+      <input type="checkbox" name="skills" value="Planning" id="skill5">
+      <label for="skill5">Planning</label><br>
+    </fieldset><hr>
+
+    <!-- Job -->
+    <fieldset>
+      <legend>Job</legend>
+      <input type="radio" name="job" value="Front-End Developer" id="job1" checked>
+      <label for="job1">Front-End Developer</label><br>
+
+      <input type="radio" name="job" value="Back-End Developer" id="job2">
+      <label for="job2">Back-End Developer</label><br>
+
+      <input type="radio" name="job" value="Business Analyst" id="job3">
+      <label for="job3">Business Analyst</label><br>
+
+      <input type="radio" name="job" value="Project Manager" id="job4">
+      <label for="job4">Project Manager</label><br>
+
+      <input type="radio" name="job" value="Scrum Master" id="job5">
+      <label for="job5">Scrum Master</label><br>
+    </fieldset><hr>
+
+    <!-- تكليف 3 -->
+    <label for="book">Choose Book:</label>
+    <select name="book" id="book">
+      <optgroup label="PHP">
+        <option value="v5.0" selected>v5.0</option>
+        <option value="v7.0">v7.0</option>
+        <option value="v8.0">v8.0</option>
+      </optgroup>
+      <optgroup label="Python">
+        <option value="v2.0">v2.0</option>
+        <option value="v3.0">v3.0</option>
+        <option value="v3.9">v3.9</option>
+      </optgroup>
+    </select><br><hr>
+
+    <textarea name="brief" rows="5" cols="40">Write Here Why You Want To Learn Programming</textarea><br><hr>
+
+    <!-- Buttons -->
+    <input type="reset" value="Empty">
+    <input type="submit" value="Send">
+
+  </form>
+
+</body>
+</html>

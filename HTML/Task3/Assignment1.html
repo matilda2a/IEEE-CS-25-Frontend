@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+<body>
+
+  <form action="test.py" method="POST">
+    
+    <!-- Username -->
+    <label for="username">Username</label><br>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+    <hr>
+
+    <!-- Password -->
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Use strong password"><br>
+    <hr>
+
+    <!-- Mobile -->
+    <label for="mobile">Mobile</label><br>
+    <input type="tel" id="mobile" name="mobile" placeholder="+20100 (234) 123"><br>
+    <hr>
+
+    <!-- Email -->
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter a valid email" required><br>
+    <hr>
+
+    <!-- Subject -->
+    <label for="subject">Subject</label><br>
+    <input type="text" id="subject" name="subject" placeholder="Write the subject here"><br>
+    <hr>
+
+    <!-- Hidden field -->
+    <input type="hidden" name="formID" value="12345">
+
+    <!-- Buttons -->
+    <button type="reset">Empty Form</button>
+    <button type="submit">Send Data</button>
+
+  </form>
+
+  <!-- Slider -->
+  <label>
+    <input type="range" id="slider" min="0" max="500" value="400">
+  </label>
+
+</body>
+</html>
+
+<!-- chmod +x Test.py -->
