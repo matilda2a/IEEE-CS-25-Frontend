@@ -1,0 +1,19 @@
+/* Bad - all uppercase is hard to read */
+.USERNAME {
+}
+
+/* Bad - PascalCase is not recommended for CSS */
+.UserName {
+}
+
+/* Good - kebab-case is the best practice in CSS */
+.user-name {
+}
+
+/* Bad - camelCase is more common in JS, not CSS */
+.userName {
+}
+
+/* Bad - name is too long and not readable */
+.usernameprofile {
+}
