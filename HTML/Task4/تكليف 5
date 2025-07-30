@@ -1,0 +1,27 @@
+/* Valid */
+._user-name {
+}
+
+/* Valid */
+.-user-name {
+}
+
+/* Not Valid - can't start with a number */
+.1user-name {
+}
+
+/* Not Valid - '@' is not allowed in class names */
+.@user-name {
+}
+
+/* Not Valid - '@' is not allowed in class names */
+.user@name {
+}
+
+/* Valid */
+._user10name {
+}
+
+/* Valid */
+.u {
+}
