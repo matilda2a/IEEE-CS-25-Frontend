@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2</title>
+  <style>
+    .block {
+      background-color: lightblue;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    .inline {
+      display: inline;
+      background-color: lightgreen;
+      padding: 5px 10px;
+      margin-right: 5px;
+      border: 1px solid green;
+    }
+
+    .wrapped-box {
+      border: 1px solid #999;
+      width: 200px;
+      word-wrap: break-word;
+      padding: 5px;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="block">This is a block element.</div>
+
+  <span class="inline">Inline element</span>
+  <span class="inline">Another inline</span>
+
+  <div class="wrapped-box">
+    This is a long text that should wrap correctly even if it's very long like this:
+    www.thisisaverylongtextthatneedswrapping.com
+  </div>
+
+</body>
+</html>
