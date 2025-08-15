@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 200px;    
+      height: 250px;     
+      padding: 20px;
+      margin: 15px;
+      text-align: left;
+      transition: 500ms;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: rotate(-2deg) scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .dot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      border-radius: 50%;
+      top: -7px;
+      right: -7px;
+      transition: 500ms;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+  <div class="dot"></div>
+  <div class="icon">
+    <img src="icon.jpg" alt="Avatar">
+  </div>
+  <div class="name">Matilda Ashraf</div>
+  <div class="role">UI/UX Designer</div>
+</div>
+
+<div class="card">
+  <div class="dot"></div>
+  <div class="icon">
+    <img src="icon.jpg" alt="Avatar">
+  </div>
+  <div class="name">Matilda Ashraf</div>
+  <div class="role">Frontend Developer</div>
+</div>
+
+</body>
+</html>

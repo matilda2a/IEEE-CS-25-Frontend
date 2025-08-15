@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f7f7f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 50px;
+      max-width: 1000px;
+      height: 80vh;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    h1 {
+      font-weight: bold;
+      color: #2a2a5e;
+      margin-bottom: 20px;
+    }
+
+    p.description {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .left,
+    .middle,
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .middle {
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+      padding: 20px;
+      text-align: left;
+      position: relative;
+      transition: 0.3s;
+      height: 150px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card.blue::before {
+      background: #00bcd4;
+    }
+
+    .card.red::before {
+      background: #f44336;
+    }
+
+    .card.orange::before {
+      background: #ffc107;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .card img {
+      width: 40px;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+    }
+  </style>
+</head>
+<body>
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Assignment3.css">
+    <title>Assignment 3</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Reliable, efficient delivery</h2>
+    <h1>Powered by Technology</h1>
+    <p class="description">
+      Our AI-powered tools use millions of project data points to ensure your project is successful.
+    </p>
+
+    <div class="cards">
+  <div class="left">
+    <div class="card blue">
+      <h3>Supervisor</h3>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="images/icon-supervisor.svg" alt="supervisor icon">
+    </div>
+  </div>
+
+  <div class="middle">
+    <div class="card red">
+      <h3>Team Builder</h3>
+      <p>Scans our talent network to create the optimal team</p>
+      <img src="images/icon-team-builder.svg" alt="Team icon">
+    </div>
+
+    <div class="card orange">
+      <h3>Karma</h3>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="images/icon-karma.svg" alt="karma icon">
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="card blue">
+      <h3>Calculator</h3>
+      <p>Uses data from past projects to estimate delivery</p>
+      <img src="images/icon-calculator.svg" alt="Calculator icon">
+    </div>
+  </div>
+</div>
+</body>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Matilda</a>.
+    </p>
+  </footer>
+</body>
+</html>
