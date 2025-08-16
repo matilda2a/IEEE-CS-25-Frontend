@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: 'my font';
+      src: url('Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'my font', sans-serif;
+    }
+
+    body {
+      background: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .section {
+      width: 35%;
+      color: white;
+      position: relative;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background: url(images/bg-main-desktop.png) no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 350px;
+      height: 200px;
+      border-radius: 12px;
+      position: absolute;
+    }
+
+    .card.front {
+      top: 180px;
+      left: 25%;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+      padding: 1.5rem;
+      display: flex;
+      background: url(images/bg-card-front.png) no-repeat center/cover;
+      
+      margin-left: 150px;
+    }
+
+    .card.back {
+      background: url(images/bg-card-back.png) no-repeat center/cover;
+      top: 420px;
+      left: 35%;
+      z-index: 1;
+      margin-left: 150px;
+    }
+
+    .card.front .logo {
+      width: 60px;
+      height: 35px;
+      background: url(images/card-logo.svg) no-repeat center/contain;
+      margin-bottom: 2rem;
+    }
+
+    .number-display {
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+
+    .info-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .back .cvc-display {
+      position: absolute;
+      top: 110px;
+      right: 20px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .form-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .data-form {
+      max-width: 350px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .data-form label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 100px;
+    }
+
+    .data-form input {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 0.3rem;
+      width: 350px;
+    }
+
+    .date-field input {
+      width: 80px;
+    }
+
+    .inline-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .cvc-row input{
+      width: 165px;
+    }
+
+    .date-field {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .submit-btn {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: hsl(278, 68%, 11%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .wrapper {
+        flex-direction: column;
+      }
+
+      .visual-section {
+        width: 100%;
+        height: auto;
+        background: url(images/bg-main-mobile.png) no-repeat center/cover;
+        justify-content: flex-start;
+      }
+
+      .visual-card.front {
+        width: 300px;
+        height: 180px;
+        top: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .visual-card.back {
+        width: 280px;
+        height: 160px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .form-area {
+        margin-top: 8rem;
+        padding: 1.5rem;
+      }
+
+      .back .cvc-display {
+        right: -110px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="section">
+      <div class="card front">
+        <div class="logo"></div>
+        <div class="number-display">0000 0000 0000 0000</div>
+        <div class="info-footer">
+          <span class="cardholder">Jane Appleseed</span>
+          <span class="expiry">00/00</span>
+        </div>
+      </div>
+
+      <div class="card back">
+        <div class="cvc-display">000</div>
+      </div>
+    </section>
+
+    <section class="form-area">
+      <form class="data-form">
+        <div>
+          <label for="username">Cardholder Name</label>
+          <input type="text"  placeholder="e.g. Jane Appleseed" />
+        </div>
+
+        <div>
+          <label for="cardnum">Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+        </div>
+
+        <div class="inline-row">
+          <div>
+            <label for="expMonth">Exp. Date (MM/YY)</label>
+            <div class="date-field">
+              <input type="text" placeholder="MM"/>
+              <input type="text" placeholder="YY"/>
+            </div>
+          </div>
+
+        <div class="cvc-row">
+          <div>
+            <label for="cvc-code">CVC</label>
+            <input type="text" placeholder="e.g. 123" />
+          </div>
+        </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirm</button>
+      </form>
+    </section>
+  </div>
+  <!-- Completed state start 
+
+  Thank you!
+  We've added your card details
+  Continue  -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Matilda</a>.
+  </div>
+</body>
+</html>
