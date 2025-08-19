@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Testimonials grid section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Barlow Semi Condensed", sans-serif;
+      background-color: hsl(210, 46%, 95%);
+      padding: 2rem;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-areas:
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 10px;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      color: hsl(219, 29%, 14%);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      line-height: 1.4;
+    }
+
+    .card .quote {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .user img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid hsl(0, 0%, 100%);
+    }
+
+    .user h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .user .verified {
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    .card--daniel {
+      background-color: hsl(263, 55%, 52%);
+      background-image: url("./images/bg-pattern-quotation.svg");
+      background-repeat: no-repeat;
+      background-position: top right 1.5rem;
+      grid-area: daniel;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .card--jonathan {
+      background-color: hsl(217, 19%, 35%);
+      grid-area: jonathan;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .card--kira {
+      background-color: hsl(0, 0%, 100%);
+      grid-area: kira;
+      color: hsl(219, 29%, 14%);
+    }
+
+    .card--jeanette {
+      background-color: hsl(0, 0%, 100%);
+      grid-area: jeanette;
+      color: hsl(219, 29%, 14%);
+    }
+
+    .card--patrick {
+      background-color: hsl(219, 29%, 14%);
+      grid-area: patrick;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-areas: unset;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="testimonials-grid">
+    <!-- Daniel -->
+    <article class="card card--daniel">
+      <div class="user">
+        <img src="./images/image-daniel.jpg" alt="Daniel Clifford" />
+        <div>
+          <h3>Daniel Clifford</h3>
+          <p class="verified">Verified Graduate</p>
+        </div>
+      </div>
+      <h2>
+        I received a job offer mid-course, and the subjects I learned were
+        current, if not more so, in the company I joined. I honestly feel I
+        got every penny’s worth.
+      </h2>
+      <p class="quote">
+        “ I was an EMT for many years before I joined the bootcamp. I’ve been
+        looking to make a transition and have heard some people who had an
+        amazing experience here. I signed up for the free intro course and
+        found it incredibly fun! I enrolled shortly thereafter. The next 12
+        weeks was the best - and most grueling - time of my life. Since
+        completing the course, I’ve successfully switched careers, working as
+        a Software Engineer at a VR startup. ”
+      </p>
+    </article>
+
+    <!-- Jonathan -->
+    <article class="card card--jonathan">
+      <div class="user">
+        <img src="./images/image-jonathan.jpg" alt="Jonathan Walters" />
+        <div>
+          <h3>Jonathan Walters</h3>
+          <p class="verified">Verified Graduate</p>
+        </div>
+      </div>
+      <h2>The team was very supportive and kept me motivated</h2>
+      <p class="quote">
+        “ I started as a total newbie with virtually no coding skills. I now
+        work as a mobile engineer for a big company. This was one of the best
+        investments I’ve made in myself. ”
+      </p>
+    </article>
+
+    <!-- Jeanette -->
+    <article class="card card--jeanette">
+      <div class="user">
+        <img src="./images/image-jeanette.jpg" alt="Jeanette Harmon" />
+        <div>
+          <h3>Jeanette Harmon</h3>
+          <p class="verified">Verified Graduate</p>
+        </div>
+      </div>
+      <h2>An overall wonderful and rewarding experience</h2>
+      <p class="quote">
+        “ Thank you for the wonderful experience! I now have a job I really
+        enjoy, and make a good living while doing something I love. ”
+      </p>
+    </article>
+
+    <!-- Patrick -->
+    <article class="card card--patrick">
+      <div class="user">
+        <img src="./images/image-patrick.jpg" alt="Patrick Abrams" />
+        <div>
+          <h3>Patrick Abrams</h3>
+          <p class="verified">Verified Graduate</p>
+        </div>
+      </div>
+      <h2>
+        Awesome teaching support from TAs who did the bootcamp themselves.
+        Getting guidance from them and learning from their experiences was
+        easy.
+      </h2>
+      <p class="quote">
+        “ The staff seem genuinely concerned about my progress which I find
+        really refreshing. The program gave me the confidence necessary to be
+        able to go out in the world and present myself as a capable junior
+        developer. The standard is above the rest. You will get the personal
+        attention you need from an incredible community of smart and amazing
+        people. ”
+      </p>
+    </article>
+
+    <!-- Kira -->
+    <article class="card card--kira">
+      <div class="user">
+        <img src="./images/image-kira.jpg" alt="Kira Whittle" />
+        <div>
+          <h3>Kira Whittle</h3>
+          <p class="verified">Verified Graduate</p>
+        </div>
+      </div>
+      <h2>Such a life-changing experience. Highly recommended!</h2>
+      <p class="quote">
+        “ Before joining the bootcamp, I’ve never written a line of code. I
+        needed some structure from professionals who can help me learn
+        programming step by step. I was encouraged to enroll by a former
+        student of theirs who can only say wonderful things about the program.
+        The entire curriculum and staff did not disappoint. They were very
+        hands-on and I never had to wait long for assistance. The agile team
+        project, in particular, was outstanding. It took my learning to the
+        next level in a way that no tutorial could ever have. In fact, I’ve
+        often referred to it during interviews as an example of my developent
+        experience. It certainly helped me land a job as a full-stack
+        developer after receiving multiple offers. 100% recommend! ”
+      </p>
+    </article>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Matilda</a>.
+  </div>
+</body>
+
+</html>

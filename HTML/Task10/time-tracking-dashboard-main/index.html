@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: #0f1424;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      background-color: #1c1f4a;
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 100px;
+      justify-content: flex-start;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-left: 100px;
+      gap: 25px;
+      flex: 1;
+    }
+
+    .profile {
+      background-color: #5746ea;
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 250px;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      margin-top: 50px;
+    }
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .user img {
+      width: 70px;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+
+    .user small {
+      opacity: 0.7;
+      font-size: 14px;
+    }
+
+    .user h2 {
+      margin-bottom: 110px;
+      font-size: 30px;
+      line-height: 1.2;
+      margin: 10;
+    }
+
+    .periods {
+      margin-top: 330px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .periods a {
+      color: rgb(193, 194, 252);
+      text-decoration: none;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .periods a.active {
+      opacity: 1;
+      color: white;
+    }
+
+    .periods a:hover {
+      opacity: 1;
+      color: white;
+    }
+
+    .card {
+      width: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    .card .top {
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+
+    .card .content {
+      background-color: #1c1f4a;
+      padding: 20px;
+      border-radius: 20px;
+      position: relative;
+      margin-top: -30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card .content:hover,
+    .sidebar:hover {
+      background-color: #2d2f69;
+    }
+
+    .card .content h3 {
+      margin: 0 0 50px 0;
+    }
+
+    .card .content p {
+      opacity: 0.6;
+      font-size: 14px;
+      color: rgb(193, 194, 252);
+    }
+
+    .card .content img:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+      transition: 0.3s ease;
+      filter: brightness(0) invert(1);
+    }
+
+    .ellipsis {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile">
+        <div class="user">
+          <img src="images/image-jeremy.png" alt="Jeremy">
+          <div>
+            <small>Report for</small>
+            <h2>Jeremy<br>Robson</h2>
+          </div>
+        </div>
+      </div>
+      <div class="periods">
+        <a class="">Daily</a>
+        <a class="active">Weekly</a>
+        <a class="">Monthly</a>
+      </div>
+    </div>
+
+
+    <!-- Cards section -->
+    <div class="cards">
+      <!-- Work -->
+      <div class="card">
+        <div class="top" style="background-color: #ff8c66; background-image: url('images/icon-work.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="...">
+          <h3>Work</h3>
+          <h1>32hrs</h1>
+          <p>Last Week - 36hrs</p>
+        </div>
+      </div>
+
+      <!-- Play -->
+      <div class="card">
+        <div class="top" style="background-color: #56c2e6; background-image: url('images/icon-play.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="...">
+          <h3>Play</h3>
+          <h1>10hrs</h1>
+          <p>Last Week - 8hrs</p>
+        </div>
+      </div>
+
+      <!-- Study -->
+      <div class="card">
+        <div class="top" style="background-color: #ff5c7c; background-image: url('images/icon-study.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="...">
+          <h3>Study</h3>
+          <h1>4hrs</h1>
+          <p>Last Week - 7hrs</p>
+        </div>
+      </div>
+
+      <!-- Exercise -->
+      <div class="card">
+        <div class="top" style="background-color: #4acf81; background-image: url('images/icon-exercise.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="...">
+          <h3>Exercise</h3>
+          <h1>4hrs</h1>
+          <p>Last Week - 5hrs</p>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="card">
+        <div class="top" style="background-color: #7536d3; background-image: url('images/icon-social.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="...">
+          <h3>Social</h3>
+          <h1>5hrs</h1>
+          <p>Last Week - 10hrs</p>
+        </div>
+      </div>
+
+      <!-- Self Care -->
+      <div class="card">
+        <div class="top" style="background-color: #f1c65b; background-image: url('images/icon-self-care.svg');"></div>
+        <div class="content">
+          <img class="ellipsis" src="images/icon-ellipsis.svg">
+          <h3>Self Care</h3>
+          <h1>2hrs</h1>
+          <p>Last Week - 2hrs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Matilda</a>.
+  </div>
+</body>
+
+</html>
